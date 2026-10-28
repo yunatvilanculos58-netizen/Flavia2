@@ -1,0 +1,591 @@
+
+/* =====================================
+   SUPORTETI | PÁGINA DE SOLUÇÕES
+===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #0b2130;
+    background: #d1ddf7;
+    border-radius: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 76px;
+    border-bottom: 1px solid #edf0f5;
+    background: rgba(255, 255, 255, 0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+    color: #172033;
+}
+
+.logo > span:last-child > span {
+    color: #4169e1;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4169e1;
+    color: white;
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+}
+
+.menu a {
+    color: #667085;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: #4169e1;
+}
+
+.nav-button {
+    background: #4169e1;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-button:hover {
+    background: #3155c5;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   SUPORTETI | PÁGINA DE PROBLEMAS
+   Design profissional, elegante e responsivo
+========================================== */
+
+/* 1. Configurações gerais */
+
+.solution-page {
+    --blue-primary: #2563eb;
+    --blue-dark: #173b75;
+    --blue-hover: #1d4ed8;
+    --blue-light: #eff6ff;
+    --blue-border: #dbe7f7;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --page-background: #f5f8fc;
+
+    min-height: 70vh;
+    padding: 38px 20px 65px;
+    background: var(--page-background);
+    color: var(--text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+.solution-page *,
+.solution-page *::before,
+.solution-page *::after {
+    box-sizing: border-box;
+}
+
+.solution-page .container {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* 2. Link para voltar */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #173b75;
+}
+
+.back-link i {
+    font-size: 14px;
+}
+
+/* 3. Cartão principal do problema */
+
+.solution-header {
+    position: relative;
+    overflow: hidden;
+    padding: 42px 30px;
+    margin-bottom: 28px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #edf4ff);
+    border: 1px solid #dbe7f7;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.06);
+}
+
+.solution-header h1 {
+    margin: 16px 0 10px;
+    color: #173b75;
+    font-size: clamp(26px, 4vw, 35px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.6px;
+}
+
+.solution-header > p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* 4. Ícone do problema */
+
+.solution-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto;
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 22px;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.solution-icon i {
+    font-size: 30px;
+}
+
+/* 5. Dificuldade e tempo estimado */
+
+.problem-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.problem-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 15px;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #dbe7f7;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.problem-info i {
+    color: #2563eb;
+}
+
+.problem-info strong {
+    color: #1e3a8a;
+}
+
+/* 6. Cartão dos passos da solução */
+
+.solution-content {
+    padding: 32px;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+    box-shadow: 0 5px 22px rgba(15, 23, 42, 0.035);
+}
+
+.solution-content h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 8px;
+    color: #173b75;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.solution-content h2 i {
+    color: #2563eb;
+    font-size: 21px;
+}
+
+.section-description {
+    margin: 0 0 25px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* 7. Lista numerada */
+
+.solution-steps {
+    padding-left: 28px;
+    margin: 0;
+}
+
+.solution-steps li {
+    padding: 13px 12px;
+    margin-bottom: 9px;
+    color: #334155;
+    line-height: 1.8;
+    border-bottom: 1px solid #edf1f7;
+}
+
+.solution-steps li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.solution-steps li::marker {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+/* 8. Caixa de dica */
+
+.tip-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 23px 25px;
+    margin-bottom: 25px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-left: 4px solid #3b82f6;
+    border-radius: 14px;
+}
+
+.tip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    color: #2563eb;
+    background: #ffffff;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.tip-box h3 {
+    margin: 0 0 5px;
+    color: #173b75;
+    font-size: 17px;
+}
+
+.tip-box p {
+    margin: 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 9. Ajuda adicional */
+
+.extra-help {
+    padding: 34px 25px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+    box-shadow: 0 5px 22px rgba(15, 23, 42, 0.035);
+}
+
+.extra-help > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 10px;
+    color: #2563eb;
+    background: #eff6ff;
+    border-radius: 18px;
+    font-size: 25px;
+}
+
+.extra-help h2 {
+    margin: 8px 0;
+    color: #173b75;
+    font-size: 23px;
+}
+
+.extra-help p {
+    max-width: 590px;
+    margin: 0 auto 23px;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* 10. Botão principal */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 23px;
+    color: #ffffff;
+    background: #2563eb;
+    border: 1px solid #2563eb;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+    transform: translateY(-1px);
+}
+
+/* 11. Cabeçalho e navegação, se existirem */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5eaf2;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px 24px;
+}
+
+.header .logo {
+    color: #1d4ed8;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header .logo i {
+    margin-right: 7px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.header nav a {
+    color: #475569;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.header nav a:hover {
+    color: #2563eb;
+}
+
+/* 12. Rodapé */
+
+.footer {
+    padding: 24px 18px;
+    color: #eaf2ff;
+    background: #173b75;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* 13. Responsividade para tablets e telemóveis */
+
+@media (max-width: 700px) {
+    .solution-page {
+        padding: 25px 15px 42px;
+    }
+
+    .solution-header {
+        padding: 32px 19px;
+        border-radius: 16px;
+    }
+
+    .solution-icon {
+        width: 68px;
+        height: 68px;
+        border-radius: 19px;
+    }
+
+    .solution-icon i {
+        font-size: 26px;
+    }
+
+    .solution-header > p {
+        font-size: 14px;
+    }
+
+    .problem-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .problem-info span {
+        justify-content: center;
+    }
+
+    .solution-content {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .solution-content h2 {
+        font-size: 20px;
+    }
+
+    .solution-steps {
+        padding-left: 23px;
+    }
+
+    .solution-steps li {
+        padding: 11px 5px;
+        font-size: 14px;
+    }
+
+    .tip-box {
+        gap: 12px;
+        padding: 19px 16px;
+    }
+
+    .extra-help {
+        padding: 28px 18px;
+    }
+
+    .extra-help h2 {
+        font-size: 21px;
+    }
+
+    .btn-primary {
+        max-width: 100%;
+        padding: 12px 17px;
+    }
+
+    .header .container {
+        padding: 16px 18px;
+    }
+
+    .header nav {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .solution-header h1 {
+        font-size: 25px;
+    }
+
+    .solution-content {
+        padding: 21px 15px;
+    }
+
+    .solution-content h2 {
+        font-size: 18px;
+    }
+
+    .tip-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+/* Acessibilidade: respeitar preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .btn-primary,
+    .back-link,
+    .header nav a {
+        transition: none;
+    }
+
+    .btn-primary:hover {
+        transform: none;
+    }
+}
